@@ -18,9 +18,11 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from cliente.api.viewsets import ClienteViewSet
+from horarios_disponiveis.api.viewsets import HorarioViewSet
 
 router = routers.DefaultRouter()
 router.register(r'cliente', ClienteViewSet)
+router.register(r'horario', HorarioViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
